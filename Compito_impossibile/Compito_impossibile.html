@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Calcolo dell'area di un quadrato</h2>
+
+<form>
+    <label for="numero">Inserisci la base e l'altezza del quadrato:</label>
+    <input type="number" id="base" name="base quadrato" min="1" required>
+    <input type="number" id="altezza" name="altezza quadrato" min="1" required>
+    <button type="button" onclick="calcolobasealtezza()">Calcola</button>
+</form>
+
+<p id="area"></p>
+
+<script>
+    function calcolobasealtezza() {
+        var h = document.getElementById("altezza").value;
+        var b = document.getElementById("base").value;
+        document.getElementById("area").innerHTML = h*b;
+    }
+</script>
+
+</body>
+</html> 
