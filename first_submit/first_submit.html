@@ -3,7 +3,9 @@
 <head>
 	<title>Sito</title>
     <style>
-    label { color: red; }
+    label { color: white; background-color: blue; }
+    body { color: blue; background-color: lightcyan;}
+    input, select, textarea { color: blue; background-color: lightgray;}
     </style>
 </head>
 <body>
@@ -15,7 +17,23 @@
   <input type="text" id="fname" name="fname" value="John"><br>
   <label for="lname">Last name:</label><br>
   <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
+
+  <label for="ctnas">Data di nascita</label><input type="text" id="dtnas" name="ctnas"><br><br>
+
+  <textarea name="messaggio" rows="18" cols="30">
+Un utente ingenuo sta regalando i suoi dati agli hacker
+  </textarea>
+
+  <label for="cars">Scegli la macchina da regalarci</label>
+  <select id="cars" name="cars">
+    <option value="Ferrari">Ferrari</option>
+    <option value="Lamborghini">Lamborghini</option>
+    <option value="McLaren">McLaren</option>
+    <option value="Pagani">Pagani</option>
+    <option value="Porsche">Porsche</option>
+  </select>
+
+  <input type="submit" value="Invia dati" onclick="alert('Bravo! hai inviato dati sensibili agli hacker!');">
 </form> 
 
 <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
