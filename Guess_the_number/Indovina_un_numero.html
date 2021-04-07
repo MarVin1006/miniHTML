@@ -11,20 +11,21 @@
     <button type="button" onclick="verifica()">Prova</button>
 </form>
 
-<p id="errori"></p>
+<p id="tentativi"></p>
 <p id="demo"></p>
 <script>
-    var errori = 5;
+    var tentativi = 5;
     var numerorandom = 1+ Math.floor(Math.random() * 10);
     function verifica() {
-        if (--errori>=0){
-            
+        if (--tentativi>=0){
         
+        document.getElementById("tentativi").innerHTML= tentativi + " tenativi rimasti";
         var n = document.getElementById("numero").value;
         if (n == numerorandom) document.getElementById("demo").innerHTML = "GG";
-        else document.getElementById("demo").innerHTML = "LOLL N4bb0 XDXdxd1!!1!!";
+        if (n > numerorandom) document.getElementById("demo").innerHTML = "Più piccolo";
+        if (n < numerorandom) document.getElementById("demo").innerHTML = "Più grande";
     }
-    document.getElementById("errori").innerHTML = errori;
+    document.getElementById("tentativi").innerHTML = tentativi;
     }
 </script>
 
