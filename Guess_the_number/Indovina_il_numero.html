@@ -7,7 +7,7 @@
 
 <form>
     <label for="numero">Inserisci un numero:</label>
-    <input type="number" id="numero" name="numero" min="1" max="10">
+    <input type="number" id="numero" name="numero" min="1" max="100">
     <button type="button" onclick="verifica()">Prova</button>
 </form>
 
@@ -15,17 +15,17 @@
 <p id="demo"></p>
 <script>
     var tentativi = 5;
-    var numerorandom = 1+ Math.floor(Math.random() * 10);
+    var numerorandom = 1+ Math.floor(Math.random() * 100);
     function verifica() {
         if (--tentativi>=0){
         
         document.getElementById("tentativi").innerHTML= tentativi + " tenativi rimasti";
         var n = document.getElementById("numero").value;
-        if (n == numerorandom) document.getElementById("demo").innerHTML = "GG";
+        if (n == numerorandom) document.getElementById("demo").innerHTML = "Bravo, hai indovinato!";
         if (n > numerorandom) document.getElementById("demo").innerHTML = "Più piccolo";
         if (n < numerorandom) document.getElementById("demo").innerHTML = "Più grande";
     }
-    document.getElementById("tentativi").innerHTML = tentativi;
+    document.getElementById("tentativi").innerHTML = tentativi + " tenativi rimanenti";
     }
 </script>
 
