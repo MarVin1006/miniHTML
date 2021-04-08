@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sito</title>
+	<title>Amazon't</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+
     <style>
-    label { color: white; background-color: blue; }
-    body { color: blue; background-color: lightcyan;}
-    input, select, textarea { color: blue; background-color: lightgray;}
+    body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: center;
+    }
     </style>
 </head>
 <body>
+    <h2>Negozio Amazon't</h2>
+    <a href="Login.html">Accedi</a><br><br><br>
+    <table>
+        <tr><img src="prodotto.jpg" alt="Immagine del prodotto"></tr>
+        <tr><br></tr>
+        <tr><input type="submit" value="Visualizza" onclick="window.location.href='prodotto.html';"></tr>
+    </table>
 
-<h2>HTML Forms</h2>
-
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-
-  <label for="ctnas">Data di nascita</label><input type="text" id="dtnas" name="ctnas"><br><br>
-
-  <textarea name="messaggio" rows="18" cols="30">
-Un utente ingenuo sta regalando i suoi dati agli hacker
-  </textarea>
-
-  <label for="cars">Scegli la macchina da regalarci</label>
-  <select id="cars" name="cars">
-    <option value="Ferrari">Ferrari</option>
-    <option value="Lamborghini">Lamborghini</option>
-    <option value="McLaren">McLaren</option>
-    <option value="Pagani">Pagani</option>
-    <option value="Porsche">Porsche</option>
-  </select>
-
-  <input type="submit" value="Invia dati" onclick="alert('Bravo! hai inviato dati sensibili agli hacker!');">
 </form> 
-
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 
 </body>
 </html>
