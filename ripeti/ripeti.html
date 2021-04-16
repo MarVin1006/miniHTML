@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], input[type=number]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+</style>
+<body>
+
+<h3>Ripete una frase per il numero di volte specificato</h3>
+
+
+<form id="frn">
+    <label for="frase">Frase:</label>
+    <input type="text" id="frase" name="frase" placeholder="Inserisci una frase">
+
+    <label for="tot">Numero di ripetizioni:</label>
+    <input type="number" id="tot" name="tot" placeholder="Numero di ripetizioni">
+
+<input type="submit" value="Ripeti" onclick="fripeti()">
+</form>
+<div id="spaziovuoto" ></div>
+
+</body>
+<script>
+function fripeti(){
+    var s = document.getElementById("frase").value;
+    document.getElementById("spaziovuoto").innerHTML = s+s;
+}
+
+</script>
+
+
+</html>
